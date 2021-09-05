@@ -7,15 +7,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class RegisterServlet
  */
-public class LoginServlet extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public LoginServlet() {
+    public RegisterServlet() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -31,15 +32,20 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String first_name = request.getParameter("first_name");
+		String last_name = request.getParameter("last_name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		if(email.equals("achung@gmail.com") && password.equals("1234")) {
-			response.sendRedirect("index.jsp");
-			System.out.println("Login Successful");
-		} else {
-			response.sendRedirect("login.jsp");
-			System.out.println("Unable to Login");
-		}
+		String password2 = request.getParameter("password2");
+
+		System.out.println("First Name: " + first_name);
+		System.out.println("Last Name: " + last_name);
+		System.out.println("Email: " + email);
+		System.out.println("Password: " + password);
+
+		response.sendRedirect("index.jsp");
+
+		
 	}
 
 }

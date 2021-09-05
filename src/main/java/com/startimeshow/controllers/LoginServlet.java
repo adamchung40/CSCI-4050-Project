@@ -30,9 +30,16 @@ public class LoginServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	protected void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws ServletException, IOException {
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+		System.out.println(email);
+		System.out.println(password);
+		if(email.equals("achung@gmail.com") && password.equals("1234")) {
+			response.sendRedirect("index.jsp");
+		} else {
+			response.sendRedirect("login.jsp");
+		}
 	}
 
 }

@@ -1,0 +1,69 @@
+body{
+    background-color: black;
+}
+
+/* ---------- Navigation Bar ---------- */
+.nav-item{
+    margin-right: 30px;
+}
+/* ---------- Navigation Bar ---------- */
+
+/* ---------- Carousel ---------- */
+.carousel-inner{
+    height: 700px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 700px;
+}
+/* ---------- Carousel ---------- */
+
+/* ---------- Featured Movies ---------- */
+.feature-movies{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+/* ---------- Featured Movies ---------- */
+
+/* ---------- Pricing ---------- */
+.text-center h2{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.panel {
+    border: 1px solid yellow;
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
+.panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.panel-body p{
+    color: rgb(248, 248, 248);
+}
+.panel-footer {
+    background-color: #fff !important;
+}
+.panel-footer h3 {
+    font-size: 32px;
+}
+.panel-footer h4 {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+/* ---------- Pricing ---------- */
+
+footer{
+    font-size: 20px;
+    margin-top: 20px;
+    color: #f4511e;
+  }

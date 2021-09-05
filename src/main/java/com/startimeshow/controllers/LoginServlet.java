@@ -1,10 +1,10 @@
 package com.startimeshow.controllers;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class LoginServlet
@@ -33,12 +33,12 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		System.out.println(email);
-		System.out.println(password);
 		if(email.equals("achung@gmail.com") && password.equals("1234")) {
 			response.sendRedirect("index.jsp");
+			System.out.println("Login Successful");
 		} else {
 			response.sendRedirect("login.jsp");
+			System.out.println("Unable to Login");
 		}
 	}
 
